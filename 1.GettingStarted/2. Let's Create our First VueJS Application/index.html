@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello World From Vue JS</title>
+    <style>
+        #app {
+            color: blue;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+
+<body>
+
+<div id="app">
+    <h1>{{ title + space + name + space + degree + space + asterix }}</h1>
+</div>
+
+<script>
+    new Vue({
+        el: '#app',
+
+        data: {
+            title: 'Hello World',
+            space: ' ',
+            name: 'Dzulfikar Maulana',
+            degree: 'S.Kom, M.T.I',
+            asterix: '!!'
+        }
+
+    });
+</script>
+</body>
+</html>
