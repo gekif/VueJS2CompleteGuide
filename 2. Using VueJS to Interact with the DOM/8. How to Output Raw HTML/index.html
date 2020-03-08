@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Output Raw HTML On Vue JS</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+<body>
+
+
+<div id="app">
+    <h1>{{ title }}</h1>
+
+    <!-- Using v-once -->
+    <h1 v-once>{{ title }}</h1>
+    <p>{{ sayHello() }} - <a v-bind:href="link">Google</a></p>
+
+    <hr>
+
+    <p v-html="finishedLink"></p>
+
+</div>
+
+<script>
+    new Vue({
+        el: '#app',
+
+        data: {
+            title: 'Hello World',
+            link: 'https://www.google.co.id',
+            finishedLink: '<a href="https://www.google.co.id">Google</a>'
+        },
+
+        methods: {
+            sayHello: function() {
+                this.title = 'Hello';
+
+                return this.title;
+            }
+        }
+    });
+</script>
+
+</body>
+</html>
