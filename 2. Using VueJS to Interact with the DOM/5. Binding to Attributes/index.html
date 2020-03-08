@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Binding On Vue JS</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+<body>
+
+
+<div id="app">
+    <p>{{ sayHello() }} - <a v-bind:href="link" target="_blank">Google</a></p>
+</div>
+
+<script>
+    new Vue({
+        el: '#app',
+
+        data: {
+            title: 'Hello World',
+            link: 'http://www.google.co.id'
+        },
+
+        methods: {
+            sayHello: function() {
+                return this.title;
+            }
+        }
+    });
+</script>
+
+</body>
+</html>
